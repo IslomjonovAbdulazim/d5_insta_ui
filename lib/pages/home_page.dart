@@ -132,6 +132,27 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Highlights
+            SizedBox(height: 20),
+            SizedBox(
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        "Highlight",
+                        style: GoogleFonts.inter(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
 
             // posts & tags
 
