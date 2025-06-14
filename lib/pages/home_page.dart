@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,16 +16,62 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xff121212),
       appBar: AppBar(
         backgroundColor: Color(0xff121212),
-
+        leading: CupertinoButton(
+          onPressed: () {},
+          child: Icon(
+            CupertinoIcons.chevron_left,
+            color: Colors.white,
+            size: 28,
+          ),
+        ),
+        centerTitle: true,
+        title: Text(
+          "user_name",
+          style: GoogleFonts.inter(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        actions: [
+          CupertinoButton(
+            onPressed: () {},
+            child: Icon(
+              CupertinoIcons.settings,
+              color: Colors.white,
+              size: 28,
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: ListView(
           children: [
             // Profile & post, followers, following
+            SizedBox(
+              height: 110,
+              child: Row(
+                children: [],
+              ),
+            ),
 
             // Description
+            SizedBox(height: 20),
+            SizedBox(
+              height: 70,
+              child: Column(),
+            ),
 
             // Actions
+            Row(
+              children: [
+                Expanded(
+                  child: CupertinoButton(
+                    onPressed: () {},
+                    child: Text("Follow"),
+                  ),
+                ),
+              ],
+            ),
 
             // Highlights
 
