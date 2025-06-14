@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SafeArea(
         child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 15),
           children: [
             // Profile & post, followers, following
             SizedBox(
@@ -66,8 +67,65 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Expanded(
                   child: CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    color: Color(0xff4192EF),
                     onPressed: () {},
-                    child: Text("Follow"),
+                    child: Text(
+                      "Follow",
+                      style: GoogleFonts.inter(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 6),
+                Expanded(
+                  child: CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    color: Color(0xff000000),
+                    onPressed: () {},
+                    child: Text(
+                      "Message",
+                      style: GoogleFonts.inter(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 6),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xff343434)),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: CupertinoButton(
+                      padding: EdgeInsets.zero,
+                      color: Color(0xff000000),
+                      onPressed: () {},
+                      child: Text(
+                        "Email",
+                        style: GoogleFonts.inter(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 6),
+                CupertinoButton(
+                  padding: EdgeInsets.zero,
+                  color: Colors.black,
+                  onPressed: () {},
+                  child: Image.asset(
+                    "assets/more.png",
+                    height: 7,
                   ),
                 ),
               ],
